@@ -1,0 +1,179 @@
+console.log('task 5, block 2, item 3')
+const holder = document.querySelector('.holder');
+const colors = ['red', 'blue','purple', 'green', 'yellow']
+const orders = [1, 4, 3, 5, 2]
+const width = [450, 300, 300, 300, 450]
+for (let i=1; i<6; i++) {
+    holder.append(document.createElement('div'))
+    holder.lastElementChild.className='item'
+    holder.lastElementChild.innerHTML=`${i}`
+    holder.lastElementChild.style.cssText = `
+                            background-color: ${colors[i-1]};
+                            width: ${width[i-1]}px;
+                            order: ${orders[i-1]};
+                            height: 100px;
+                            display: flex;
+                            align-items: center;
+                            font-size: 30px;
+                            font-weight: bold;
+                            justify-content: center;        
+                            `
+                            }
+let item = document.getElementsByClassName('item')[0]
+holder.style.cssText = `
+                width: 900px;
+                border: 6px solid black;
+                border-radius: 25px 25px 0 0;
+                display: flex;
+                flex-wrap: wrap;
+                overflow: hidden;
+                `
+
+console.log('task 5, block 2, item 4')
+// Напилить код функции modificator, такой, чтобы в результате работы кода была строка "sampleFunc: test | sample":
+function sampleFunc() {
+    console.log (`${arguments.callee.name}: ${arguments[0]} | ${arguments[1]}`)
+}
+function modificator(func) {
+    // console.log(arguments)
+    // let arg =arguments[0]
+    // arg[1]='test'
+    return func
+}
+const testFunc = modificator(sampleFunc);
+testFunc(); // sampleFunc: test | sample
+
+
+console.log('task 5, block 2, item 5')
+const group = [{
+                name: "John",
+                lastName: "Silver",
+                age: 88,
+                notebook: false,
+                },
+              {
+                name: "Jimmy",
+                lastName: "Smith",
+                age: 15,
+                notebook: true,
+              },
+];
+function getStudentsList(arrayOfStudents) {
+    for(let i=0; i<arrayOfStudents.length; i++){
+        let str = ""
+        for(let name in arrayOfStudents[i]){
+            str += `${name} - ${arrayOfStudents[i][name]}, `
+        }
+        console.log(str.slice(0, -2))
+    }
+}
+getStudentsList(group); // Name - Vlad,lastName - Test,haveLaptop - true
+// эта строка должна появиться только после преобразования объекта к строке
+
+
+
+console.log('task 5, block 3, item 1')
+const p = document.getElementsByTagName('p')[0]
+const img = document.getElementsByTagName('img')[0]
+img.style.cssText = `
+            display: none;
+            `
+console.log(p)
+p.addEventListener('click', function (){
+    img.style.display='block'
+})
+img.addEventListener('mouseover', function (){
+    img.style.cssText=`
+        scale: 2;
+        transform-origin: left top;
+        transition: 5s;`
+})
+img.addEventListener('click', function (){
+    img.style.display='none'
+    img.style.scale="0.5"
+})
+
+
+
+console.log('task 5, block 3, item 2')
+// Дан массив с числами.
+// Найдите сумму последних N элементов до первого нуля с конца.
+// Пример: [1, 2, 3, 0, 4, 5, 6] - суммируем последние 3 элемента, так как дальше стоит элемент с числом 0.
+const arr_532 = [1, 2, 3, 0, 4, 5, 6]
+let resulut532 = 0
+for(let i=arr_532.length-1; i>-1; i--) {
+    if (arr_532[i] !== 0) {
+        resulut532 += arr_532[i]
+    }
+    else {
+        break
+    }
+}
+console.log('sum is ', resulut532)
+
+
+
+console.log('task 5, block 3, item 3')
+// Дан массив с числами. Узнайте сколько элементов с начала массива надо сложить, чтобы в сумме получилось больше 10-ти.
+const arr_533 = [1, 2, 3, 0, 4, 5, 6]
+let mySum = 0
+let quantity = 0
+for (let i=0; i<arr_533.length; i++){
+    mySum += arr_533[i]
+    if (mySum > 10) {
+        quantity = i
+        break
+    }
+}
+console.log('we needed ', quantity, ' figures to reach >10', arr_533.slice(0, quantity))
+
+
+
+
+console.log('task 5, block 3, item 4')
+// Есть инпут, в который что-то вводим. Рядом с инпутом есть кнопка.
+//     По нажатию на кнопку выводим в консоль то, что вписали в инпут.
+
+const form_btn = document.getElementById('form_btn')
+form_btn.addEventListener('click', function (){
+    console.log(document.getElementById('form_input').value)
+})
+
+
+
+
+console.log('task 5, block 3, item 5')
+const links = document.getElementsByTagName('a')
+for (let i=0; i < links.length; i++) {
+    links[i].addEventListener('mouseover', function (){
+        links[i].append(document.createElement('span'));
+        links[i].children[0].innerHTML=` (${links[i].href.toString()})`
+    })
+    links[i].addEventListener('mouseout', function (){
+        links[i].children[0].innerHTML=''
+    })
+}
+
+
+
+console.log('task 5, block 3, item 6')
+const btn535 = document.getElementById('btn535')
+console.log(btn535)
+btn535.addEventListener('click', function (){
+    btn535.style.display='none'
+})
+
+
+
+console.log('task 5, block 3, item 7')
+const form1_input = document.getElementById('form1_input')
+form1_input.addEventListener('keyup', function (event){
+    if(!parseInt(event.key) || parseInt(event.key) === 0) {
+        form1_input.value = ''
+    }
+    else if((parseInt(event.key) > 600) || (parseInt(event.key) < 0)) {
+        form1_input.value = 'ERROR'
+    }
+})
+
+

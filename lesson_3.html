@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>A.Nosov assignment</title>
+    <link rel="stylesheet" href="lesson_3.css">
+</head>
+<body>
+<section class="task_1">
+    <h2>Block_1 Task 1</h2>
+    <div class="task_1__container">
+        <h2>Регистрация</h2>
+        <form class="reg_form" action="#" method="post">
+            <label>Фамилия:<input class="task1_input_1" type="text" placeholder="Введите фамилию"></label>
+            <label>Имя:<input class="task1_input_1" type="text" placeholder="Введите имя"></label>
+            <label>Отчество:<input class="task1_input_1" type="text" placeholder="Введите отчество"></label>
+            <label>Дата рождения:
+                <span class="task1_helper">
+                    <input class="task_a_date" type="number" min="1" max="31" step="1" placeholder="День">
+                    <input class="task_a_date" type="number" min="1" max="12" step="1" placeholder="Месяц">
+                    <input class="task_a_date" type="number" min="1900" max="2099" step="1" placeholder="Год">
+                </span>
+            </label>
+            <label>Email:<input class="task1_input_1" type="email" placeholder="Email"></label>
+            <label>Пароль:<input class="task1_input_1" type="password" placeholder="Введите пароль"></label>
+            <label>Повторите пароль:<input class="task1_input_1" type="password"
+                                           placeholder="Введите пароль еще раз"></label>
+            <label>Телефон:<input class="task1_input_1" type="number" placeholder="Введите номер телефона"></label>
+            <label><span class="task1_textarea_label">Адрес:</span><textarea rows="4" placeholder="Введите адрес"></textarea></label>
+            <label>Пол:
+                <span class="task1_helper">
+                    <input type="radio" name="gender"><span class="task1_gender11">Мужской</span>
+                    <input class="task1_gender12" type="radio" name="gender"><span>Женский</span>
+                    </span>
+            </label>
+            <label>
+                <span class="task1_helper">
+                    <input type="checkbox">Я согласен с <a href="#">условиями</a>
+                </span>
+            </label>
+            <label>
+                <span class="task1_helper">
+                    <button class="task1_btn_submit" type="submit">Регистрация</button>
+                    <button class="task1_btn_clear" type="reset" onclick="resetForm()">Очистить форму</button>
+                </span>
+            </label>
+        </form>
+    </div>
+    </div>
+</section>
+
+
+<script src="lesson_3.js"></script>
+</body>
+</html>

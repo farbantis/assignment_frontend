@@ -1,0 +1,447 @@
+* {
+    box-sizing: border-box;
+    font-family: "Times New Roman";
+}
+
+/*task 1*/
+.task1_menu {
+    max-width: 500px;
+    margin: 0 auto;
+}
+.task_menu_inside {
+    background: grey;
+    overflow:hidden;
+}
+.task_menu_inside li {
+    float: left;
+    padding: 10px;
+    text-align: center;
+    list-style-type: none;
+}
+.task_menu_inside li:hover {
+    background: yellow;
+}
+
+/*task 2*/
+.task_2__ul {
+    color: #0E1116;
+    font-size: 18px;
+}
+.task_2__ul {
+    display: table;
+}
+
+.task_2__ul :nth-child(3n+1) {
+    background-color: #88292F
+}
+.task_2__ul :nth-child(3n+2) {
+    background-color: #5DB7DE;
+}
+.task_2__ul :nth-child(3n+3) {
+    background-color: #0D5D56;
+}
+
+/*task 3*/
+.task_3 li::before{
+    content: "\2192";
+    margin-right: 5px;
+}
+
+/*task 4*/
+.container4 {
+    background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url('./htm_css_js/rainy_day.jpg');
+    width: 800px;
+    height: 400px;
+}
+
+/*task 5*/
+.main_block {
+    width: 400px;
+    height: 400px;
+    background-color: grey;
+    display: block;
+    font-size: 0;
+    margin: 0 auto;
+}
+.inside_block{
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+    position: relative;
+}
+.main_block :first-child{
+    background-color: red;
+}
+.main_block :nth-child(2){
+    background-color: blue;
+    left: 50px;
+}
+.main_block :nth-child(3){
+    background-color: green;
+    left: 100px;
+}
+.main_block :nth-child(4){
+    background-color: purple;
+    left: -300px;
+    bottom: -150px;
+}
+.main_block :nth-child(5){
+    background-color: olive;
+    left: 150px;
+    bottom: -50px;
+}
+.main_block :nth-child(6){
+    background-color: orange;
+    left: 200px;
+    bottom: -50px;
+}
+.main_block :nth-child(7){
+    background-color: yellow;
+    left: -200px;
+    bottom: -200px;
+}
+.main_block :nth-child(8){
+    background-color: coral;
+    left: -150px;
+    bottom: -200px;
+}
+.main_block :last-child{
+    background-color: darksalmon;
+    left: 300px;
+    bottom: -100px;
+}
+
+/*task 6*/
+.task_6 {
+    height: 150px;
+
+}
+.task_6__container {
+    display: flex;
+    max-width: 630px;
+    margin: 0 auto;
+    color: white;
+    background-color: black;
+}
+.task_6__container > div  {
+    padding: 5px 15px;
+    margin: 5px 10px;
+    border: 3px solid transparent;
+
+}
+.task_6__container > div > a {
+    color: white;
+}
+.task_6__container > div:hover {
+    border: 3px solid yellow;
+    border-radius: 32px 64px;
+}
+.menu {
+    position: relative;
+}
+.menu:hover .submenu {
+    visibility: visible;
+}
+.submenu {
+    visibility: hidden;
+    position: absolute;
+    padding-top: 15px;
+    width: 50px;
+    bottom: -90px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.submenu a {
+    color: black;
+}
+.submenu a:hover {
+    text-decoration: underline blue 2px;
+}
+.task_6__container a {
+    text-decoration: none;
+}
+
+/*task 7*/
+.task_7__main{
+    margin: 0 auto;
+    width: 570px;
+    height: 570px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 1px solid black;
+    box-shadow: 0 0 30px;
+    border-radius: 10px;
+}
+.task_7__main img {
+    height: 150px;
+    width: 150px;
+    box-shadow: 0 0 30px purple;
+    border-radius: 10px;
+}
+
+/*task 8*/
+.container8 {
+    width: 257px;
+    margin: 0 auto;
+    display: flex;
+}
+.card {
+    border: 1px solid grey;
+    padding: 5px;
+
+}
+.card:hover {
+    box-shadow: 0 0 0 10px #ded2d2;
+}
+
+.card_picture img:hover {
+    transform: rotate(5deg);
+    transition: 0.2s ease-in;
+}
+.card_title {
+    font-size: 20px;
+    font-weight: bolder;
+    padding: 5px 5px;
+    text-align: center;
+}
+.card_title:hover {
+    transform: scale(1.15);
+    color: grey;
+    transition: transform 0.2s, color 0.3s ease-in;
+}
+.card_text {
+    text-align: center;
+    padding: 5px 5px;
+}
+.card_button {
+    text-align: center;
+    margin: 10px 0;
+}
+.card_button button {
+    color: white;
+    background-color: grey;
+    padding: 10px 50px;
+}
+.card_button button:hover {
+    color: white;
+    width: 100%;
+    padding: 10px 50px;
+    background-color: deeppink;
+    transition: background-color 2s;
+}
+/*task 9*/
+
+form {
+    max-width: 250px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    /*font-family: "Times New Roman";*/
+}
+form input {
+    width: 100%;
+    padding: 10px 5px;
+    font-size: 12px;
+    margin-bottom: 20px;
+}
+input::placeholder {
+    padding-left: 10px;
+    text-align: left;
+}
+textarea::placeholder {
+    padding-left: 5px;
+    text-align: left;
+}
+form :nth-child(3) {
+    margin-bottom: 20px;
+    padding: 10px;
+}
+.form_btn {
+    width: 100%;
+}
+.btn {
+    display: block;
+    margin: 0 auto;
+    padding: 10px 30px;
+    background-color: hotpink;
+    color: white;
+}
+
+/*task 10*/
+.container10 {
+    max-width: 500px;
+    margin: 0 auto;
+    font-size: 12px;
+    color: #313030;
+}
+table {
+    border-collapse: collapse;
+}
+caption {
+    font-weight: bold;
+    font-size: 14px;
+    padding: 10px;
+}
+thead {
+    color: white;
+    background-color: black;
+    padding: 5px 10px;
+}
+tbody td:nth-child(2), tbody td:nth-child(3) {
+    text-align: center;
+}
+td, th {
+    border: 1px solid black;
+    padding: 8px 10px;
+}
+
+/*task 11*/
+.container11 {
+    max-width: 960px;
+    margin: 0 auto;
+}
+.task11_header {
+    background-color: yellow;
+    border: 1px solid black;
+    max-width: 100%;
+    padding-top: 5%;
+    position: relative;
+    margin-bottom: 20px;
+}
+.task11_header__content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+.wrapper11 {
+    display: flex;
+    max-width: 100%;
+    position: relative;
+}
+.wrapper11 article {
+    margin-right: 20px;
+}
+.wrapper11 > article:first-child {
+    width: 56%;
+    padding-top: 50%;
+    background-color: blue;
+}
+.wrapper11 > article:last-child {
+    margin-right: 0;
+}
+.wrapper11 > article:first-child .article_content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+.wrapper11 > article:nth-child(2) {
+    width: 22%;
+    background-color: grey;
+}
+.wrapper11 > article:nth-child(3) {
+    width: 22%;
+    background-color: red;
+}
+
+.task11_footer {
+    position: relative;
+    background-color: green;
+    width: 100%;
+    padding-top: 5%;
+    border: 1px solid black;
+    margin-top: 20px;
+}
+.task11_footer__content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+
+/*task 12*/
+.container12 {
+    margin: 0 auto;
+    width: 500px;
+    height: 200px;
+}
+.container12_content {
+    background-color: yellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container12_sidebar {
+    background-color: green;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+    .container12 div {
+        width: 200px;
+        height: 100px;
+    }
+}
+@media (min-width: 768px) {
+    .container12 {display: flex}
+    .container12_content{width: 300px}
+    .container12_sidebar{width: 100px}
+}
+
+
+
+/*task 13*/
+.task_13 {margin-bottom: 100px;}
+
+.container13 {
+    margin: 0 auto;
+    width: 300px;
+    border: 10px solid #eee5e5;
+}
+.container13_header {
+    height: 150px;
+    background-color: red;
+    border-bottom: 10px solid #eee5e5;
+}
+.container13_main {
+    height: 235px;
+}
+.container13_article1 {
+    width: 120px;
+    background-color: green;
+    border-right: 10px solid #eee5e5;
+}
+.container13_article2 {
+    width: 180px;
+    background-color: blue;
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+    .container13_main {
+        display: block;
+    }
+    .container13_article1 {
+        border-bottom: 10px solid #eee5e5;
+        border-right: 0;
+        width: 100%;
+        height: 150px;
+    }
+    .container13_article2 {
+        width: 100%;
+        height: 85px;
+    }
+}
+@media (min-width: 768px) {
+    .container13_main {display: flex}
+
+}
+
